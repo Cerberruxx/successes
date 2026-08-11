@@ -10,7 +10,7 @@ while True:
 
 	try:
 		# searches current dir
-		file=Path(usr_inp)
+		file_append=Path(usr_inp)
 
 	except FileNotFoundError as e:
 		print(e)
@@ -21,12 +21,12 @@ while True:
 	else:
 
 		usr_append=input("Write text to insert:__")
-		with file.open(mode="a", encoding="utf-8") as file_append:
+		with file_append.open(mode="a", encoding="utf-8") as file:
 			file.write(f"{usr_append}\n")
+			print("File appended.")
 
 
 	finally:
-        print("File appended.")
         
 		end_choice=input("Append to another file? (Y/N)")
 		case_ins=end_choice.lower().strip()
