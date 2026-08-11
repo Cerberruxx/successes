@@ -26,9 +26,11 @@ while True:
 
 
 	finally:
+        print("File appended.")
+        
 		end_choice=input("Append to another file? (Y/N)")
 		case_ins=end_choice.lower().strip()
 		if(end_choice!="y"):
-			print("Closing program...)
+			print("Closing program...")
 			break
 			
